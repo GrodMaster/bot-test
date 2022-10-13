@@ -46,7 +46,7 @@ const start = ()=>{
         if(data === '/again'){
             return startGame(chatId)
         }
-        if(data === chats[chatId]){
+        if(data == chats[chatId]){
             return bot.sendMessage(chatId, `Поздравляю, ты угадал ${chats[chatId]}!`, againOptions)
         }else{
             return bot.sendMessage(chatId, `К сожалению не угадал! ${chats[chatId]}`, againOptions)
